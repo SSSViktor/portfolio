@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
+body{
+    margin: 0;
+}
+
 main{
     width: 80%;
     max-width: 1200px;
@@ -20,7 +24,7 @@ main{
 }
 
 header{
-    background-color: #F4F2F2;
+    background-color: #FFFFFF;
     height: 200px;
     border-radius: 15px;
     display: flex;
@@ -33,7 +37,6 @@ header{
 
 nav{
     background-color: #FF9E20;
-    height: 100px;
     display: flex;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -53,6 +56,11 @@ nav a{
     color: black;
     font-size: 20px;
     font-family: "Roboto Condensed", sans-serif;
+    height: 50px;
+}
+
+nav a:hover{
+    background-color: #facc91;
 }
 
 nav a:nth-child(1){
@@ -169,6 +177,7 @@ nav a:nth-child(4){
     padding: 10px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 #kapcsolat p{
@@ -177,10 +186,57 @@ nav a:nth-child(4){
 
 #kapcsolat section{
     flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#kapcsolat section div{
+    background-color: #F4F2F2;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    box-shadow: 5px 5px 0 0 #143d3f;
+    font-family: "Boldonse", system-ui;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #B4B4B4;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: solid black 3px;
+}
+
+@media (max-width: 980px){
+    #projektek img{
+        width: 150px;
+        height: 150px;
+    }
 }
 
 @media (max-width: 800px){
-    main{
-        background-color: red;
+    nav {
+        flex-direction: column;
+    }
+    #bemu_kesz{
+        flex-direction: column;
+    }
+    #bemutatkozas section{
+        flex-direction: column;
+    }
+    #keszsegek section div{
+        font-size: 10px;
+    }
+    #projektek section{
+        flex-direction: column;
+    }
+    #kapcsolat{
+        flex-direction: column;
     }
 }
